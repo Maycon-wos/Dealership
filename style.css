@@ -278,6 +278,10 @@ section .about .about-content{
     justify-content: space-between;
 
 }
+
+.title-wrapper-about{
+    margin-bottom: 20px;
+}
 .about .left{
     width: 25%;
     min-width: 300px;
@@ -392,6 +396,7 @@ footer{
     width: 30px;
     height: 30px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .footer-links h4{
@@ -423,7 +428,14 @@ footer{
     padding: 20px;
 }
 
+/* Responsive */
+
 @media (max-width: 1000px){
+
+
+    .title-wrapper-catalog {
+        padding-left: 20px;
+    }
 
    .content .filter-card{
         
@@ -433,7 +445,16 @@ footer{
 
    .search-button{
         width: 150px;
-        padding-right: 20px;
+        padding:0 10px 0 10px;
+   }
+
+   .title-wrapper-about{
+        padding-left: 10px;
+   }
+
+
+   .title-whapper-features{
+    padding-left: 20px;
    }
 
    footer .main{
@@ -447,6 +468,18 @@ footer{
     .content nav ul li{
         display: none;
     }
+
+    .slogan .text{
+        
+        top:15%    
+    }
+
+    header .slogan img{
+        
+        width: 70%;
+        right: 15%;              
+    } 
+
     .content .filter-card{
         width: 450px;
     }
@@ -466,4 +499,65 @@ footer{
         text-align: left;
      }
 
+    footer .main{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-links{
+        margin-bottom: 40px;
+    }   
 }
+
+    @media (max-width: 480px){
+
+        header .slogan .text{
+            left: 20%;
+            
+        }
+        header .slogan .text p{
+            text-align: start;
+        }
+        header .slogan .text h2{
+            text-align: start;
+        }
+        header .slogan img{
+            width: 80%;
+            left: 10%;
+        }
+
+        .content .filter-card{
+            width: 300px;
+        }
+
+         .about .content .about-content {
+            height: auto;
+        }
+        
+        .features-card-block{
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .features-card-block .card-item{
+
+            height: 120px;
+        }
+
+        .features-card-block .card-item img{
+            width: 25%;
+        }
+    
+        .features-card-block .card-item .features-text-content h3{
+            font-size: 1.1rem ;
+        }
+
+        .features-card-block .card-item .features-text-content p{
+            font-size: 1rem;
+        }
+
+        .footer2-content .footer2 p{
+          font-size: 0.9rem;  
+        }
+
+    
+    }
